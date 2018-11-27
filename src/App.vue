@@ -1,17 +1,61 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ChipInput v-model="selectedData" :selectList="chipData"></ChipInput>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import ChipInput from "./components/ChipInput"
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    ChipInput
+    
+  },
+  data(){
+    return{
+      selectedData:[],
+ chipData: [
+        {
+          value: "1",
+          text: "Root Access"
+        },
+        {
+          value: "2",
+          text: "Manage catlog"
+        },
+        {
+          value: "3",
+          text: "Manage reviews"
+        },
+        {
+          value: "4",
+          text: "Manage users"
+        },
+        {
+          value: "5",
+          text: "Manage administrators"
+        },
+        {
+          value: "6",
+          text: "Manage orders"
+        },
+        {
+          value: "7",
+          text: "Manage import"
+        },
+        {
+          value: "8",
+          text: "Manage import"
+        },
+        {
+          value: "9",
+          text: "Manage import"
+        }
+      ]
+    }
   }
 }
 </script>
